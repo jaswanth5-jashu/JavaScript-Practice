@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">
+        input1
+        <input type="text" id="input" placeholder="Enter anything"
+        style="width:50vw;">
+    </label>
+
+    <script>
+        document.getElementById('input').addEventListener('keypress',show);
+
+        function show(event){
+            console.log("key pressed",event.key)
+            console.log("value",event.target.value) //keypress event fires before the typed letter is added to the input box.
+                                                        //So event.target.value always shows the previous text.
+        }
+    </script>
+    
+</body>
+</html>
