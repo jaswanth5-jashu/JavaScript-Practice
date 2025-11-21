@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .box{
+            width: 250px;
+            height: 250px;
+            border: 2px solid black;
+        }
+    </style>
+ 
+</head>
+<body>
+    <div class="box">
+
+    </div>
+    <label for="">
+        <input type="radio" name="clr" value="red" class="bg">
+        red 
+        <input type="radio" name="clr" value="blue" class="bg">
+        blue 
+        <input type="radio" name="clr" value="gold" class="bg">
+        gold 
+    </label>
+    <script>
+        let r;
+        r = document.querySelectorAll('.bg');
+        for(let btn of r){
+            btn.addEventListener('change',process);
+        }
+
+        function process(event){
+            let t1;
+            t1 = document.querySelector('.box');
+            t1.style.backgroundColor = event.target.value;
+            
+        }
+    </script>
+</body>
+</html>

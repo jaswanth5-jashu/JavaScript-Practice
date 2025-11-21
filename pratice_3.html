@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+</head>
+    <body>
+        <label for="">
+            value 1
+            <input type="text" id="t1">
+        </label><br><br>
+        <label for="">
+            value 2
+            <input type="text" id="t2">
+        </label><br><br>
+        <button id="bt1">Add</button>
+        <button id="bt2">sub</button>
+        <button id="bt3">multi</button>
+        <button id="bt4">div</button>
+        <p id="out"></p>
+        <script>
+            document.getElementById('bt1').addEventListener('click',process);
+            document.getElementById('bt2').addEventListener('click',process);
+            document.getElementById('bt3').addEventListener('click',process);
+            document.getElementById('bt4').addEventListener('click',process);
+            function process(event){
+                let v1,v2,res,p_tag,action,clr;
+                v1=parseInt(document.getElementById('t1').value);
+                v2=parseInt(document.getElementById('t2').value);
+                if(event.target.innerText == 'Add'){
+                    res = v1+v2;
+                    action = 'Add'
+                    clr = 'green'
+                }
+                else if(event.target.innerText == 'sub'){
+                    res = v1-v2;
+                    action = 'sub'
+                    clr = 'red'
+                }
+                else if(event.target.innerText == 'multi'){
+                    res = v1*v2;
+                    action = 'multi'
+                    clr = 'pink'
+                }
+                else{
+                    res = v1/v2
+                    action = 'div'
+                    clr = 'blue'
+                }
+                document.getElementById('t1').value = '';
+                document.getElementById('t2').value = '';
+                p_tag = document.getElementById('out');
+                p_tag.innerHTML = '<h1>'+action+':'+res+'<h2>'
+                p_tag.style.color = clr
+                
+            }
+        </script>
+    
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .box{
+            width: 250px;
+            height: 250px;
+            border: 2px solid black;
+        }
+
+    </style>
+   
+</head>
+<body>
+    <div class="box">
+
+    </div>
+    <select id="bg">
+        <option  value="Red">Red</option>
+        <option  value="blue">blue</option>
+        <option  value="green">green</option>
+        <option  value="gold">gold</option>
+    </select>
+    <script>
+        let r;
+        r = document.querySelector('#bg');
+        r.addEventListener('change',process);
+
+        function process(){
+            let v;
+            v = document.querySelector('.box');
+            v.style.backgroundColor = event.target.value
+
+        }
+
+    </script>
+    
+</body>
+</html>

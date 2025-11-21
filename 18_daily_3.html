@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+        p{
+            margin-left: 45vw;
+            margin-top: 10vw;
+            font-size: x-large;
+
+            
+        }
+        button{
+            margin-left: 45vw;
+            margin-top: 18vw;
+            width: 5vw;
+            height: 5vw;
+        }
+    </style>
+</head>
+<body>
+    <p id="p_tag">Hello</p>
+    <button id="btn" onclick="process()">
+        click me
+    </button>
+    <script>
+        function process(event){
+            document.getElementById('p_tag').innerText =
+            'Welcome to JavaScript!'
+    }
+
+    </script>
+</body>
+</html>

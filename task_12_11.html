@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+</head>
+<body>
+    <button id="btn">Click Me</button>
+    <script>
+        document.querySelector('#btn').addEventListener('click',process);
+
+        function process(event){
+            if(event.target.textContent==='Click Me'){
+                event.target.textContent = 'Clicked!'
+                event.target.style.backgroundColor = 'red'
+            }else{
+                event.target.textContent = 'Click Me'
+                event.target.style.backgroundColor = 'white'
+
+            }
+
+
+        }
+    </script>
+    
+</body>
+</html>

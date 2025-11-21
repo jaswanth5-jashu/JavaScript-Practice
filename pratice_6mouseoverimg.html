@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="official-poster-hd-DEvYi-GH.jpg" alt=""
+     id="img"
+     width="700" 
+     style=" margin-left: 25%; cursor: pointer; display: block;"
+
+     
+     >
+     
+     <script>
+        document.getElementById('img').addEventListener('mouseover',process);
+        document.getElementById('img').addEventListener('mouseout',out);
+
+        function process(event){
+            console.log('mouse entered')
+            event.target.style.backgroundColor = 'red';
+        }
+
+        function out(event){
+            console.log('mouse leave')
+            event.target.style.backgroundColor = 'white';
+        }
+
+     </script>
+    
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        
+    </style>
+    
+</head>
+<body>
+    <label for="">
+        To do
+        <input type="text" id="v1">
+    </label>
+    <button id="btn">Add</button>
+    <ul id="ul">
+        
+    </ul>
+    <script>
+        document.getElementById('btn').addEventListener('click',process);
+
+        function process(){
+            let t1,out,ele;
+            t1 = document.getElementById('v1').value;
+            out = document.getElementById('ul');
+            ele = document.createElement('li');
+            ele.textContent = t1;
+            out.appendChild(ele);
+        }
+
+    </script>
+</body>
+</html>
